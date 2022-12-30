@@ -667,7 +667,13 @@ section {
   text-align: center;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 640px) {
+  .gallery .img-fluid{
+    width: 40%;
+  }
+}
+
+@media (min-width: 800px) {
   .gallery .swiper-wrapper {
     padding: 40px 0;
   }
