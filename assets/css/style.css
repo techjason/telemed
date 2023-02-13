@@ -357,6 +357,28 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.pink {
+  background-color: #F4CAE0;
+
+}
+
+.kelly-1 {
+  background-color: #FFA9A3;
+
+}
+
+.kelly-1 p{
+  font-weight: 500;
+  color: #000;
+}
+
+.kelly-1 ul{
+  margin-left: 10px;
+  font-weight: 500;
+  color: #000;
+}
+
+
 #hero {
   width: 100%;
   position: relative;
