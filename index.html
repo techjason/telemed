@@ -132,9 +132,10 @@
               <li>🤌 Is my penis/vagina normal?</li>
               <li>📍 Where can I test for STDs?</li>
               <li>⚧️ Are there gender-affirming hormone therapies in Hong Kong?</li>
+              <li>💊 How much are birth control pills?</li>
+              <li>🥼 Wil the doctor tell my parents if I have an STD?</li>
             </ul>
 
-            <div class="chatbutton download-btn"><i class="bi bi-people-fill"></i>Talk to Kelly</div>
 
           </div>
         </div>
@@ -477,16 +478,16 @@
 
         function onButtonClick () {
             BE_API.openChatWindow()
-            hideButton()
+            // hideButton()
         }
 
-        function showButton () {
-            button.classList.remove('hidden')
-        }
-
-        function hideButton () {
-            button.classList.add('hidden')
-        }
+        // function showButton () {
+        //     button.classList.remove('hidden')
+        // }
+        //
+        // function hideButton () {
+        //     button.classList.add('hidden')
+        // }
 
         window.BE_API = window.BE_API || {}
 
@@ -494,18 +495,18 @@
             window.BE_API.hideChatWindow()
             showButton()
         }
-
-        window.BE_API.onChatWindowOpen = function () {
-            hideButton()
-        }
-
-        window.BE_API.onChatWindowClose = function () {
-            window.BE_API.hideChatWindow()
-        }
-
-        window.BE_API.onChatWindowHide = function () {
-            showButton()
-        }
+        //
+        // window.BE_API.onChatWindowOpen = function () {
+        //     hideButton()
+        // }
+        //
+        // window.BE_API.onChatWindowClose = function () {
+        //     window.BE_API.hideChatWindow()
+        // }
+        //
+        // window.BE_API.onChatWindowHide = function () {
+        //     showButton()
+        // }
     </script>
 
     <!-- Start of ChatBot (www.chatbot.com) code -->
