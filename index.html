@@ -92,7 +92,9 @@
 
             <!-- <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>-->
 
-            <button onclick="" class="download-btn"><i class="bi bi-people-fill"></i>Talk to Kelly by Pressing Black Button At Bottom Right</button>
+            <button id="myBtn" onclick="window.botpressWebChat.sendEvent({ type: 'show' });" class="download-btn"><i class="bi bi-people-fill"></i>Talk to Kelly</button>
+
+
             <button type="button" class="btn btn-outline-secondary">Beta V1.0</button>
 
 
@@ -139,7 +141,7 @@
               <li>🥼 Wil the doctor tell my parents if I have an STD?</li>
             </ul>
 
-            <button onclick="" class="download-btn"><i class="bi bi-people-fill"></i>Talk to Kelly by Pressing Black Button At Bottom Right</button>
+              <button id="myBtn" onclick="window.botpressWebChat.sendEvent({ type: 'show' });" class="download-btn"><i class="bi bi-people-fill"></i>Talk to Kelly</button>
 
 
 
@@ -526,21 +528,34 @@
         })();
     </script> -->
     <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-        "botId": "1ae39d4c-1cb9-4f0e-a114-32447becf85d",
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-        "messagingUrl": "https://messaging.botpress.cloud",
-        "clientId": "1ae39d4c-1cb9-4f0e-a114-32447becf85d",
-        "botName": "Kelly",
-        "stylesheet": "https://tabmed.hk/botpress.css",
-        "className": "botcss",
-        "composerPlaceholder": "Start by saying Hi...",
-        "showConversationsButton": "false",
-        "disableNotificationSound": "false",
-        "layoutWidth": "400",
-    });
-  </script>
+    <script>
+      window.botpressWebChat.init({
+          "botId": "1ae39d4c-1cb9-4f0e-a114-32447becf85d",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "1ae39d4c-1cb9-4f0e-a114-32447becf85d",
+          "botName": "Kelly",
+          "stylesheet": "https://tabmed.hk/botpress.css",
+          "className": "botcss",
+          "composerPlaceholder": "Start by saying Hi...",
+          "showConversationsButton": "false",
+          "disableNotificationSound": "false",
+          "layoutWidth": "400",
+          "avatarUrl": "https://tabmed.hk/kellyicon.png",
+          "enableTranscriptDownload": "false",
+
+
+      });
+
+    </script>
+
+    <script>
+const element = document.getElementById("myBtn");
+element.addEventListener("click", myFunction1);
+function myFunction1() { window.botpressWebChat.sendEvent({ type: 'show' }) }
+</script>
+
+
     <!-- End of ChatBot code -->
 </body>
 
