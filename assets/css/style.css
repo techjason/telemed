@@ -158,6 +158,24 @@ h6 {
   display : none;
 }
 
+.replaceStatement {
+  padding: 0;
+}
+
+/* COLOURFUL CALL TO ACTION */
+
+@media (max-width: 575px) {
+  .replaceStatement {
+    padding: 0px 0px;
+  }
+
+  .replaceStatement .replaceStatementInner {
+    margin: 0;
+  }
+
+  .
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
