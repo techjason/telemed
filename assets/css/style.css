@@ -33,6 +33,22 @@ h6 {
 }
 
 
+.bigger h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.bigger h2 {
+  color: #515f7d;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1156,6 +1172,7 @@ section {
   padding: 0 100px;
 }
 
+
 .faq .accordion-list ul {
   padding: 0;
   list-style: none;
@@ -1172,6 +1189,19 @@ section {
   position: relative;
 }
 
+
+.faq .accordion-list .faqlink {
+  display: inline;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 0;
+  outline: none;
+  cursor: pointer;
+}
+
 .faq .accordion-list a {
   display: block;
   position: relative;
@@ -1183,6 +1213,8 @@ section {
   outline: none;
   cursor: pointer;
 }
+
+
 
 .faq .accordion-list .icon-help {
   font-size: 24px;

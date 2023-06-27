@@ -54,3 +54,34 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+// SCROOOLLING LOGO
+
+
+var scroller = $('#logo-ticker div.footer-logo-slider');
+var scrollerContent = scroller.children('ul');
+scrollerContent.children().clone().appendTo(scrollerContent);
+var sum_width_of_elem = 0;
+scrollerContent.children().each(function() {
+  var $this = $(this);
+  $this.css('left', sum_width_of_elem);
+  sum_width_of_elem += $this.outerWidth(true);
+});
+
+var fullW = sum_width_of_elem / 2;
+var viewportW = scroller.width();
+
+// Scrolling speed management
+var controller = { curSpeed: 0, fullSpeed: 2 };
+var $controller = $(controller);
+var contSpeed = function(newSpeed) {
+var duration = 600;
+  $controller.stop(false).animate({ curSpeed: newSpeed });
+};
+
+// Pause on hover
+scroller.hover(function() {
+  contSpeed(0);
+}, function() {
+  contSpeed(controller.fullSpeed);
+});
