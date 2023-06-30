@@ -472,6 +472,35 @@ h6 {
 
 }
 
+.makegpt {
+  width: 100%;
+
+}
+
+.makegpthero {
+  padding-top: 150px;
+}
+
+.homelogo {
+  background-color: #fff;
+}
+
+.dialoguifyhero {
+  background-color: #197BBD;
+}
+
+.pdf2ankihero {
+  background-color: #E65F5C;
+}
+
+.dialoguify {
+  width: 100%
+}
+
+.drai {
+  background-color: #43AA8B;
+}
+
 .mainhero {
   background-image: url("../img/homebg.jpg");
   background-size: cover;
