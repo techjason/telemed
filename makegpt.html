@@ -111,7 +111,7 @@
 
             <a href="pricing.html" target="_blank" style="text-decoration:none"><button id="myBtn"  class="trial-btn"><i class="bi bi-arrow-right-short"></i>Build Your Chatbot Now</button></a>
 
-            <a href="https://docs.google.com/forms/d/1epN9MZ1ep5TM94BVjWQAzQy7Bfb1O4MSzO5xWdPSgms/viewform?edit_requested=true" target="_blank" style="text-decoration:none"><button id="myBtn"  class="download-btn"><i class="bi bi-briefcase-fill"></i>Use Cases</button></a>
+            <a href="https://docs.google.com/forms/d/1epN9MZ1ep5TM94BVjWQAzQy7Bfb1O4MSzO5xWdPSgms/viewform?edit_requested=true" target="_blank" style="text-decoration:none"><button  class="download-btn"><i class="bi bi-briefcase-fill"></i>Use Cases</button></a>
 
             <div class="my-3">
 
@@ -598,41 +598,28 @@
 
   <!-- AI BotPress -->
 
-  // Import the Botpress WebChat JavaScript file
   <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-
-  // Initialize the Botpress WebChat with the required parameters
   <script>
-      window.botpressWebChat.init({
-          // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
-          "botId": "724bfd33-89ab-4173-a3fe-c28bd1178443",
-          "clientId": "724bfd33-89ab-4173-a3fe-c28bd1178443",
-
-          // Set the URL for the Botpress WebChat JavaScript file and the messaging server
-          "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-          "messagingUrl": "https://messaging.botpress.cloud",
-          "composerPlaceholder": "Start by saying \"Hi\"",
-
-          // Set the name of the bot that will be displayed in the WebChat interface
-          "botName": "Tab AI",
-          "botConversationDescription": "Trained on tabmed.hk",
-
-
-
-          "stylesheet": "https://webchat-styler-css.botpress.app/prod/eb531400-3e2e-4b5e-bf83-75ffe1653ded/v52837/style.css",
-
-      });
-
-      // Opens up the Chatbot by default
-      // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
-      window.botpressWebChat.onEvent(
-          function () {
-              window.botpressWebChat.sendEvent({ type: "show" });
-          },
-          ["LIFECYCLE.LOADED"]
-      );
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Start by saying Hi...",
+        "botConversationDescription": "Trained on tabmed.hk!",
+        "botId": "724bfd33-89ab-4173-a3fe-c28bd1178443",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "724bfd33-89ab-4173-a3fe-c28bd1178443",
+        "botName": "Tabmed",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/eb531400-3e2e-4b5e-bf83-75ffe1653ded/v27498/style.css"
+    });
   </script>
 
+  <script>
+  const element = document.getElementById("myBtn");
+  element.addEventListener("click", myFunction1);
+  function myFunction1() { window.botpressWebChat.sendEvent({ type: 'show' }) }
+  </script>
+
+
+  <!-- End of ChatBot code -->
 <!--
   <script>
         var button = document.querySelector('.chatbutton')
