@@ -276,6 +276,8 @@
                        <p class="text-lg">
                           This chatbot was trained on our website and a document explaining Tabmed. You can embed a widget or via iframe on any page on your website or app.
                        </p>
+                       <button id="myBtn" onclick="window.botpressWebChat.sendEvent({ type: 'show' });" class="download-btn"><i class="bi bi-people-fill"></i>Talk to Tab</button>
+
                     </div>
                     <!-- video title -->
                  </div>
@@ -284,7 +286,7 @@
               <div class="row justify-content-center">
                  <div class="col-lg-10">
 
-                    <iframe src="https://app.tabmed.hk/chatbot/embed/95574d6c-d5e7-4629-9bf0-543d52c2bca1" width="100%" height="600" frameborder="0" ></iframe>
+                    <!-- <iframe src="https://app.tabmed.hk/chatbot/embed/95574d6c-d5e7-4629-9bf0-543d52c2bca1" width="100%" height="600" frameborder="0" ></iframe> -->
                  </div>
               </div>
               <!-- row -->
@@ -582,10 +584,6 @@
         <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
       </div>
   </footer><!-- End Footer -->
-
-<!-- Back to top button -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -599,6 +597,47 @@
   <script src="assets/js/wave.js"></script>
 
   <!-- AI BotPress -->
+
+  // Import the Botpress WebChat JavaScript file
+  <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+
+  // Initialize the Botpress WebChat with the required parameters
+  <script>
+      window.botpressWebChat.init({
+          // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
+          "botId": "724bfd33-89ab-4173-a3fe-c28bd1178443",
+          "clientId": "724bfd33-89ab-4173-a3fe-c28bd1178443",
+
+          // Set the URL for the Botpress WebChat JavaScript file and the messaging server
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+          "messagingUrl": "https://messaging.botpress.cloud",
+
+          // Set the name of the bot that will be displayed in the WebChat interface
+          "botName": "Tab AI",
+          "botConversationDescription": "Trained on tabmed.hk",
+
+          // Set the width of the WebChat container and layout to 100% (Full Screen)
+          "containerWidth": "100%25",
+          "layoutWidth": "100%25",
+
+          // Hide the widget and disable animations
+          "hideWidget": true,
+          "disableAnimations": true,
+
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/eb531400-3e2e-4b5e-bf83-75ffe1653ded/v13699/style.css",
+
+      });
+
+      // Opens up the Chatbot by default
+      // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
+      window.botpressWebChat.onEvent(
+          function () {
+              window.botpressWebChat.sendEvent({ type: "show" });
+          },
+          ["LIFECYCLE.LOADED"]
+      );
+  </script>
+
 <!--
   <script>
         var button = document.querySelector('.chatbutton')
