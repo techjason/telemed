@@ -257,11 +257,12 @@ h6 {
   margin-left: 5px;
 }
 
+
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #022F6F;
+  color: #000000;
 }
 
 .navbar .getstarted,
@@ -351,6 +352,32 @@ h6 {
     left: -100%;
   }
 }
+
+.navbar .navchrome,
+.navbar .navchrome:focus {
+    background: #bc4e9c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    padding: 12px 25px;
+    margin-left: 30px;
+    line-height: 1;
+    border-radius: 50px;
+}
+
+/* Additional styles for hover effects similar to the ones we added for .chromebutton */
+.navbar .navchrome:hover {
+    transform: scale(1.1);  /* Enlarge by 10% */
+    color: #fff; /* Text color changed to white */
+    text-decoration: none;
+}
+
+.navbar .navchrome:active,
+.navbar .navchrome:visited {
+    text-decoration: none;
+}
+
+
 
 /**
 * Mobile Navigation
@@ -648,19 +675,13 @@ h6 {
   border-radius: 20px;
   transition: 0.5s;
   color: #fff;
-  background: #bc4e9c;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #e65e5c;  /* Plainer, solid color (gray in this case) */
   position: relative;
+  
 }
 
-
 .trial-btn:hover {
-  background: #ff9966;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+  background: #e65e5c;  /* Slightly darker shade of gray for hover */
 }
 
 .trial-btn i {
@@ -680,6 +701,7 @@ h6 {
 .trial-btn+.trial-btn {
   margin-left: 20px;
 }
+
 
 @media (max-width: 1400px) {
   #hero h1 {
@@ -1223,8 +1245,16 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq .accordion-list {
-  padding: 0 100px;
-}
+    display: flex;
+    justify-content: center; /* This centers the content horizontally */
+    align-items: center; /* This centers the content vertically (optional) */
+    /* Add any other styles for the container div if needed */
+  }
+  
+  .container {
+    /* Add any styles specific to the anchor link here */
+  }
+  
 
 
 .faq .accordion-list ul {
@@ -1645,3 +1675,41 @@ section {
     padding: 5px 0;
   }
 }
+
+
+/* /.chromebutton that applies across html in differential diagnosis*/
+
+.chromebutton,
+.chromebutton:focus {
+    background: #bc4e9c;
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* For old Chrome and Safari */
+    background: linear-gradient(to right, #f80759, #bc4e9c); /* Modern browsers */
+    color: #fff;
+    padding: 12px 25px;
+    margin-left: 30px;
+    line-height: 1;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;  
+    outline: none; 
+    font-weight: 600;  /* Semi-bold */
+    font-family: Helvetica, Arial, sans-serif;  /* Helvetica font with fallbacks */
+    transition: transform 0.3s;  /* Smooth transition for the zoom effect */
+}
+
+.chromebutton:hover {
+    transform: scale(1.1);  /* Enlarge the button by 10% */
+    text-decoration: none;
+}
+
+.chromebutton:active, 
+.chromebutton:visited {
+    text-decoration: none;
+}
+
+
+
+
+
+

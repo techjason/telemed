@@ -125,11 +125,13 @@ h6 {
   letter-spacing: 2px;
 }
 
-
-
 #header .logo img {
   margin: 0;
   max-height: 40px;
+}
+
+.agency-logo {
+  width: 300px;
 }
 
 /*--------------------------------------------------------------
@@ -179,7 +181,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #022F6F;
+  color: #000000;
 }
 
 .navbar .getstarted,
@@ -264,6 +266,31 @@ h6 {
     left: -100%;
   }
 }
+
+.navbar .navchrome,
+.navbar .navchrome:focus {
+    background: #bc4e9c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    padding: 12px 25px;
+    margin-left: 30px;
+    line-height: 1;
+    border-radius: 50px;
+}
+
+/* Additional styles for hover effects similar to the ones we added for .chromebutton */
+.navbar .navchrome:hover {
+    transform: scale(1.1);  /* Enlarge by 10% */
+    color: #fff; /* Text color changed to white */
+    text-decoration: none;
+}
+
+.navbar .navchrome:active,
+.navbar .navchrome:visited {
+    text-decoration: none;
+}
+
 
 /**
 * Mobile Navigation
@@ -1344,4 +1371,37 @@ section {
     text-align: center;
     padding: 5px 0;
   }
+}
+
+
+
+/* /.chromebutton that applies across html in differential diagnosis*/
+
+.chromebutton,
+.chromebutton:focus {
+    background: #bc4e9c;
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* For old Chrome and Safari */
+    background: linear-gradient(to right, #f80759, #bc4e9c); /* Modern browsers */
+    color: #fff;
+    padding: 12px 25px;
+    margin-left: 30px;
+    line-height: 1;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;  
+    outline: none; 
+    font-weight: 600;  /* Semi-bold */
+    font-family: Helvetica, Arial, sans-serif;  /* Helvetica font with fallbacks */
+    transition: transform 0.3s;  /* Smooth transition for the zoom effect */
+}
+
+.chromebutton:hover {
+    transform: scale(1.1);  /* Enlarge the button by 10% */
+    text-decoration: none;
+}
+
+.chromebutton:active, 
+.chromebutton:visited {
+    text-decoration: none;
 }
